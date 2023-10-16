@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "ggparser"
+version = "0.1.0"
+description = "GGPoker hand history parser"
+authors = ["akira <asa.shakira340@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+pre-commit = "^3.5.0"
+ruff = "^0.0.292"
+
+[tool.poetry.scripts]
+ggparser = "ggparser.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+select = ["ALL"]
+ignore = ["D", "ANN101"]
+line-length = 120
